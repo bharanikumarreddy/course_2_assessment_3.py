@@ -109,7 +109,7 @@ p = p = "Summer is a great time to go outside. You have to be careful of the sun
 low_d  = collections.defaultdict(int)
 
 for c in p:
-    low_d[c] += 1
+    low_d[c.lower()] += 1
         
 for c in sorted(low_d, key=low_d.get, reverse=True):
     if low_d[c] > 1:
