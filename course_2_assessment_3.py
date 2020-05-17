@@ -100,6 +100,26 @@ for i in sally:
 sorted(characters.items(), key=lambda x: x[1])
 worst_char = sorted(characters.items(), key=lambda x: x[1])[-13][0]
 
+#8)Create a dictionary named letter_counts that contains each letter and the number of times it occurs in string1. Challenge: Letters should not be counted separately as upper-case and lower-case. Intead, all of them should be counted as lower-case.
+
+
+string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
+
+string1.lower()
+
+letter_counts = {}
+
+for c in string1.lower():
+    if c not in letter_counts:
+        letter_counts[c] = 0
+        letter_counts[c] = letter_counts[c] + 1
+    else:
+        letter_counts[c] = letter_counts[c] + 1
+print(letter_counts)
+
+
+
+
 # 9. Create a dictionary called low_d that keeps track of all the characters in the string p
 # and notes how many times each character was seen. Make sure that there are no repeats of characters as keys,
 # such that “T” and “t” are both seen as a “t” for example.
